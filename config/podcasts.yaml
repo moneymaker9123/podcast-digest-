@@ -1,0 +1,99 @@
+# Podcast Digest — Podcast List
+# Each entry needs a name, RSS feed URL, and theme for email grouping.
+# To find RSS feeds: search "<podcast name> RSS feed" or use podcastindex.org
+
+podcasts:
+  # ── Tech ──────────────────────────────────────────────
+  - name: "All-In Podcast"
+    rss_url: "https://rss.libsyn.com/shows/254861/destinations/1928300.xml"
+    theme: "Tech"
+
+  - name: "Dwarkesh Podcast"
+    rss_url: "https://apple.dwarkesh-podcast.workers.dev/feed.rss"
+    theme: "Tech"
+
+  - name: "No Priors"
+    rss_url: "https://feeds.megaphone.fm/nopriors"
+    theme: "Tech"
+
+  - name: "Moonshots with Peter Diamandis"
+    rss_url: "https://feeds.megaphone.fm/DVVTS2890392624"
+    theme: "Tech"
+
+  - name: "BG2Pod"
+    rss_url: "https://anchor.fm/s/f06c2370/podcast/rss"
+    theme: "Tech"
+
+  - name: "a16z Podcast"
+    rss_url: "https://feeds.simplecast.com/JGE3yC0V"
+    theme: "Tech"
+
+  - name: "The Alternative Data Podcast"
+    rss_url: "https://feeds.acast.com/public/shows/the-alternative-data-podcast"
+    theme: "Tech"
+
+  - name: "Lex Fridman Podcast"
+    rss_url: "https://lexfridman.com/feed/podcast/"
+    theme: "Tech"
+
+  - name: "Everyday AI Podcast"
+    rss_url: "https://rss.buzzsprout.com/2175779.rss"
+    theme: "Tech"
+
+  - name: "Latent Space"
+    rss_url: "https://api.substack.com/feed/podcast/1084089.rss"
+    theme: "Tech"
+
+  # ── Finance / Business ────────────────────────────────
+  - name: "Invest Like the Best"
+    rss_url: "https://feeds.megaphone.fm/investlikethebest"
+    theme: "Finance"
+
+  - name: "Odd Lots"
+    rss_url: "https://feeds.megaphone.fm/GLT1412515089"
+    theme: "Finance"
+
+  - name: "Flirting with Models"
+    rss_url: "https://feeds.captivate.fm/flirting-with-models/"
+    theme: "Finance"
+
+  - name: "Macro Voices"
+    rss_url: "https://feed.podbean.com/macrovoices/feed.xml"
+    theme: "Finance"
+
+  - name: "The Macro Trading Floor"
+    rss_url: "https://feeds.megaphone.fm/ALFINVESTMENTSTRATEGYBV2974145286"
+    theme: "Finance"
+
+  - name: "Making Sense (JP Morgan)"
+    rss_url: "https://feed.podbean.com/marketmatters/feed.xml"
+    theme: "Finance"
+
+  - name: "Founders"
+    rss_url: "https://feeds.megaphone.fm/DSLLC6297708582"
+    theme: "Finance"
+
+  - name: "Acquired"
+    rss_url: "https://feeds.transistor.fm/acquired"
+    theme: "Finance"
+
+  - name: "Thoughts on the Market"
+    rss_url: "https://rss.art19.com/thoughts-on-the-market"
+    theme: "Finance"
+
+  - name: "Top Traders Unplugged"
+    rss_url: "https://feeds.captivate.fm/top-traders-unplugged/"
+    theme: "Finance"
+
+  # ── Health / Personal ─────────────────────────────────
+  - name: "Chasing Excellence"
+    rss_url: "https://rss.art19.com/chasing-excellence"
+    theme: "Health"
+
+  - name: "Huberman Lab"
+    rss_url: "https://feeds.megaphone.fm/hubermanlab"
+    theme: "Health"
+
+  - name: "Coaching Real Leaders"
+    rss_url: "https://rss.art19.com/coaching-real-leaders"
+    theme: "Health"

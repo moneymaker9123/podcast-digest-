@@ -1,0 +1,19 @@
+# Email settings
+email:
+  recipient: "jmaube91@gmail.com"
+  sender: "jmaube91@gmail.com"
+  subject_prefix: "Podcast Digest"
+
+# Summarization settings
+summarizer:
+  model: "claude-sonnet-4-5-20250929"
+  max_transcript_tokens: 100000  # Chunk transcripts longer than this
+
+# Transcript settings
+transcript:
+  min_show_notes_words: 500      # Use show notes if they have at least this many words
+  whisper_model: "whisper-1"
+  max_audio_size_mb: 25          # Whisper API limit per request
+
+# How far back to look for new episodes (hours)
+lookback_hours: 24
