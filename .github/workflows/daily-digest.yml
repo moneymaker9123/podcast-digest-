@@ -2,7 +2,7 @@ name: Daily Podcast Digest
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # 12:00 UTC daily — adjust to your preference
+    - cron: '0 12 * * *'  # 7:00 AM EST (12:00 UTC)
   workflow_dispatch:       # Allow manual runs from GitHub UI
 
 jobs:
