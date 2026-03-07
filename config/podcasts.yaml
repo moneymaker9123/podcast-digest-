@@ -40,10 +40,6 @@ podcasts:
     rss_url: "https://rss.buzzsprout.com/2175779.rss"
     theme: "Tech"
 
-  - name: "Latent Space"
-    rss_url: "https://rss.flightcast.com/vgnxzgiwwzwke85ym53fjnzu.xml"
-    theme: "Tech"
-
   # ── Finance / Business ────────────────────────────────
   - name: "Invest Like the Best"
     rss_url: "https://feeds.megaphone.fm/investlikethebest"
