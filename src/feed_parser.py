@@ -30,7 +30,8 @@ def fetch_new_episodes(
             resp = requests.get(
                 podcast.rss_url,
                 timeout=15,
-                headers={"User-Agent": "PodcastDigest/1.0"},
+                headers={"User-Agent": "python-feedparser/6.0 +https://github.com/kurtmckee/feedparser"},
+                allow_redirects=True,
             )
             resp.raise_for_status()
             sanitized = _sanitize_xml(resp.text)
