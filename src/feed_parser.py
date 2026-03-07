@@ -4,10 +4,16 @@ from datetime import datetime, timezone, timedelta
 from time import mktime
 
 import feedparser
+import requests
 
 from .models import Episode, PodcastConfig
 
 logger = logging.getLogger(__name__)
+
+
+def _sanitize_xml(content: str) -> str:
+    """Fix common XML issues like unescaped ampersands."""
+    return re.sub(r'&(?!(?:[a-zA-Z][a-zA-Z0-9]*|#[0-9]+|#x[0-9a-fA-F]+);)', '&amp;', content)
 
 
 def fetch_new_episodes(
@@ -17,6 +23,20 @@ def fetch_new_episodes(
     logger.info(f"Fetching feed for '{podcast.name}': {podcast.rss_url}")
 
     feed = feedparser.parse(podcast.rss_url)
+
+    if feed.bozo and not feed.entries:
+        logger.warning(f"  Feed parse failed, retrying with XML sanitization: {feed.bozo_exception}")
+        try:
+            resp = requests.get(
+                podcast.rss_url,
+                timeout=15,
+                headers={"User-Agent": "PodcastDigest/1.0"},
+            )
+            resp.raise_for_status()
+            sanitized = _sanitize_xml(resp.text)
+            feed = feedparser.parse(sanitized)
+        except Exception as e:
+            logger.error(f"Failed to fetch/sanitize feed for '{podcast.name}': {e}")
 
     if feed.bozo and not feed.entries:
         logger.error(
