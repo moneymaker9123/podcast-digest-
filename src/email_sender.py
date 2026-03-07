@@ -1,11 +1,11 @@
 import logging
 import smtplib
-from collections import OrderedDict
 from datetime import datetime, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
+import markdown as md
 from jinja2 import Environment, FileSystemLoader
 
 from .models import Summary
@@ -91,6 +91,8 @@ def _render_html(
 ) -> str:
     """Render the HTML email template."""
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)))
+    env.filters["markdown"] = lambda text: md.markdown(text, extensions=["nl2br"])
+    episode_ids = {s.episode.guid: i for i, s in enumerate(summaries)}
     template = env.get_template("email_template.html")
     return template.render(
         summaries=summaries,
@@ -99,6 +101,7 @@ def _render_html(
         subject_prefix=subject_prefix,
         date=date,
         episode_count=len(summaries),
+        episode_ids=episode_ids,
     )
 
 

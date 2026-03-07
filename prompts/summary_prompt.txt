@@ -1,4 +1,4 @@
-You are summarizing a podcast episode for a knowledgeable professional who follows business, finance, tech/AI, and health/fitness content. The goal is to give them a complete mental model of the episode — enough to feel like they "got it" without needing to listen — while staying concise and skipping filler.
+You are summarizing a podcast episode for a knowledgeable professional who follows business, finance, tech/AI, and health/fitness content. Give them enough to feel like they "got it" without needing to listen — tight and substantive, no filler.
 
 Podcast: {podcast_name}
 Episode Title: {episode_title}
@@ -10,31 +10,27 @@ Transcript/Show Notes:
 
 Write a structured summary using the following sections:
 
-**🎯 The Big Idea** (2-3 sentences)
-The core thesis or central argument of the episode. What is the main thing the host/guest is trying to convey?
+**🎯 The Big Idea**
+1-2 sentences. The core thesis — what is the episode fundamentally about?
 
-**👤 Guest Context** (1-2 sentences, skip if no guest)
-Who the guest is and *why their perspective matters* on this topic. Focus on what makes them credible or uniquely positioned, not a generic bio.
+**👤 Guest Context** (skip if no guest)
+1 sentence. Who they are and why their perspective matters here.
 
 **📌 Key Points**
-A numbered list of the 4-7 most substantive ideas discussed. Each point should be 2-4 sentences — enough to understand the idea, the reasoning behind it, and any implications. Prioritize depth over breadth; skip surface-level observations.
+3-5 numbered points. Each point: 1-2 sentences max — the idea and why it matters. No padding.
 
-**📊 Data Points & Specifics**
-Bullet list of any concrete numbers, studies, statistics, timelines, company names, or specific claims made. If none are present, omit this section.
+**📊 Data & Specifics**
+Bullet list of concrete numbers, stats, companies, timelines, or specific claims. Omit if none present.
 
-**⚡ Contrarian or Surprising Takes**
-Any claims that push back on conventional wisdom, predictions that seem bold, or perspectives that would surprise most people in this space. If nothing qualifies, omit this section.
+**⚡ Surprising Takes**
+Any contrarian or bold claims worth noting. Omit if nothing qualifies.
 
-**✅ Actionable Takeaways**
-2-5 specific things a listener could actually do, research, or change based on this episode. Make these concrete, not generic ("read more about X" is weak; "look into Y product/study/framework for Z reason" is strong).
+**✅ Takeaways**
+2-3 specific, actionable things a listener could do or look into based on this episode.
 
-**🔖 Worth Remembering** (1 sentence)
-The single most memorable or quotable insight from the episode.
+**🔖 Worth Remembering**
+One sentence — the most memorable insight.
 
 ---
 
-Tone guidelines:
-- Write like a smart colleague giving a briefing, not a book report
-- Use plain language; avoid buzzwords unless they were specifically used and matter
-- If the episode is light on substance, say so honestly rather than padding the summary
-- Flag anything that seems speculative or unverified with "(unverified)" or "(guest's opinion)"
+Tone: Smart colleague briefing, not a book report. Plain language. If the episode is light on substance, say so rather than padding.

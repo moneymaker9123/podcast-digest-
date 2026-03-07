@@ -18,7 +18,7 @@ def summarize_episode(
     transcript: str,
     transcript_source: str,
     api_key: str,
-    model: str = "claude-sonnet-4-5-20250929",
+    model: str = "claude-sonnet-4-6",
 ) -> str:
     """Summarize a podcast episode using Claude API."""
     prompt_template = _load_prompt_template()

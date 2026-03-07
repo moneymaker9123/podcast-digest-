@@ -110,10 +110,18 @@
     font-size: 15px;
     line-height: 1.7;
   }
+  .summary-content p {
+    margin: 8px 0;
+  }
   .summary-content strong {
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 4px;
+    color: #1a1a1a;
+  }
+  .summary-content ul, .summary-content ol {
+    margin: 6px 0;
+    padding-left: 20px;
+  }
+  .summary-content li {
+    margin: 4px 0;
   }
   .footer {
     text-align: center;
@@ -140,7 +148,7 @@
     <ul>
       {% for summary in themes[theme] %}
       <li>
-        <a href="#episode-{{ summary.episode.guid | replace('/', '-') | replace(':', '-') }}">{{ summary.episode.podcast_name }} &mdash; {{ summary.episode.title }}</a>
+        <a href="#ep-{{ episode_ids[summary.episode.guid] }}">{{ summary.episode.podcast_name }} &mdash; {{ summary.episode.title }}</a>
         <span class="source-tag">({{ summary.transcript_source }})</span>
       </li>
       {% endfor %}
@@ -154,13 +162,14 @@
   <div class="theme-header">{{ theme }}</div>
 
   {% for summary in themes[theme] %}
-  <div class="episode" id="episode-{{ summary.episode.guid | replace('/', '-') | replace(':', '-') }}">
+  <a name="ep-{{ episode_ids[summary.episode.guid] }}"></a>
+  <div class="episode" id="ep-{{ episode_ids[summary.episode.guid] }}">
     <div class="episode-header">
       <p class="podcast-name">{{ summary.episode.podcast_name }}</p>
       <h2>{{ summary.episode.title }}</h2>
     </div>
     <div class="summary-content">
-      {{ summary.content | replace('\n', '<br>') }}
+      {{ summary.content | markdown | safe }}
     </div>
   </div>
   {% endfor %}

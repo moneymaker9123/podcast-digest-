@@ -6,7 +6,7 @@ email:
 
 # Summarization settings
 summarizer:
-  model: "claude-sonnet-4-5-20250929"
+  model: "claude-sonnet-4-6"
   max_transcript_tokens: 100000  # Chunk transcripts longer than this
 
 # Transcript settings
